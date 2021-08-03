@@ -1,32 +1,16 @@
 "use strict";
 
-let num = 20;
+const text = "Some text for learning";
 
-function showFirstMessage(text) {
-    console.log(text);
-    // let num = 10;
-    console.log(num);
-}
+console.log(text.slice(6, 11));
 
-showFirstMessage("Hello world!");
+console.log(text.substring(6, 11));
 
-console.log(num);
+console.log(text.substr(6, 5));
 
-// function calc(a, b) {
-//     return (a + b);
-// }
+const num = 12.2;
+console.log(Math.round(num));
 
-// console.log(calc(4, 5));
-// console.log(calc(8, 3));
-// console.log(calc(14, 15));
-
-const logger = function() {
-    console.log("Hello");
-};
-
-const calc = (a, b) => {
-    console.log('1');
-    return a + b;
-};
-
-console.log(calc(4, 5));
+const test = "12.2px";
+console.log(parseInt(test));
+console.log(parseFloat(test));
