@@ -1,16 +1,25 @@
 "use strict";
 
-const text = "Some text for learning";
+function first() {
+    setTimeout(function() {
+        console.log(1);
+    }, 500);
+}
 
-console.log(text.slice(6, 11));
+function second() {
+    console.log(2);
+}
 
-console.log(text.substring(6, 11));
+first();
+second();
 
-console.log(text.substr(6, 5));
+function learnJS(lang, callback) {
+    console.log(`Я учу: ${lang}`);
+    callback();
+}
 
-const num = 12.2;
-console.log(Math.round(num));
+function done() {
+    console.log('Я прошел этот урок!');
+}
 
-const test = "12.2px";
-console.log(parseInt(test));
-console.log(parseFloat(test));
+learnJS('JavaScript', done);
