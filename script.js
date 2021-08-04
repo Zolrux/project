@@ -1,29 +1,37 @@
 "use strict";
 
-let str = "some";
-let strObj = new String(str);
+//To String
 
-// console.log(typeof(str));
-// console.log(typeof(strObj));
+console.log(String(null));
+console.log(typeof (null + ''));
 
-console.dir([1, 2, 3]);
+const num = 5;
 
-const soldier = {
-    health: 100,
-    armor: 75,
-    sayHello: function() {
-        console.log("Hello");
-    }
-};
+console.log("https://vk.com//catalog/" + num);
 
-const John = Object.create(soldier); // Создание обьекта прототипа soldier
+const fontSize = 26 + 'px';
 
-// const John = {
-//     health: 45
-// };
+// To Number
 
-// John.__proto__ = soldier; // Устаревшая запись
+console.log(typeof (Number('4')));
 
-// Object.setPrototypeOf(John, soldier);
+console.log(typeof (+'5'));
 
-John.sayHello();
+console.log(typeof (parseInt("15px", 10)));
+
+let answer = +prompt("Hello", "");
+
+// To boolean
+
+let switcher = null; // Null это false
+
+switcher = 1;
+
+if (switcher) {
+    console.log("Working...");
+}
+
+console.log(typeof(Boolean('4')));
+
+console.log(typeof (!!"444444")); // boolean
+
