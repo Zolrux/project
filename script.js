@@ -1,26 +1,28 @@
 "use strict";
 
-const now = new Date('2021-08-13');
-// new Date.parse('2021-08-13'); Одинаково с выше кодом
+const box = document.querySelector('.box'),
+      btn = document.querySelector('.btn');
 
-console.log(now.setHours(40));
-console.log(now);
+// const width = box.clientWidth;
+// const height = box.clientHeight;
 
-// console.log(now.getFullYear());
-// console.log(now.getMonth());
-// console.log(now.getDate());
-// console.log(now.getDay());
-// console.log(now.getUTCHours());
+// const width = box.offsetWidth;
+// const height = box.offsetHeight;
 
-// console.log(now.getTimezoneOffset());
-// console.log(now.getTime());
+const width = box.scrollWidth;
+const height = box.scrollHeight;
 
-let start = new Date();
+console.log(width, height);
 
-for (let i = 0; i < 100000; i++) {
-    let some = i ** 3;
-}
+btn.addEventListener('click', () => {
+    // box.style.height = box.scrollHeight + 'px';
+    console.log(box.scrollTop);
+});
 
-let end = new Date();
+console.log(box.getBoundingClientRect().top);
 
-alert(`Цикл отработал за ${end - start} миллисекунд`)
+const style = window.getComputedStyle(box);
+
+console.log(style.display);
+
+console.log(document.documentElement.scrollTop);
