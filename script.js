@@ -1,13 +1,16 @@
 "use strict";
 
-const log = function (a, b, ...rest) {
-    console.log(a, b, rest);
+const person = {
+    name: 'Alex',
+    tel: '+744444444',
+    parents: {
+        mom: 'Tanya',
+        dad: 'Igor'
+    }
 };
 
-log('basic', 'rest', 'operator', 'usage');
-
-function calcOrDouble(number, basis = 2) {
-    console.log(number * basis);
-}
-
-calcOrDouble(3);
+// console.log(JSON.parse(JSON.stringify(person)));
+const clone = JSON.parse(JSON.stringify(person));
+clone.parents.mom = 'Ann';
+console.log(person);
+console.log(clone);
